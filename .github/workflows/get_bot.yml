@@ -8,7 +8,7 @@ on:
       name:
         description: 'Bot Unique Name'
         required: true
-        default: 'PaymentArrangement-V1'
+        default: 'Payment_Arrangement_MainIVR_Bot'
 
 jobs:
   build:

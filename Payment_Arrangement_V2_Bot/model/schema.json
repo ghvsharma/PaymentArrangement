@@ -20,7 +20,7 @@
                         "messages" : [
                             {
                                 "say" : {
-                                    "speech" : "I didn't get that. What did you say?"
+                                    "speech" : "I didn't get that. What did you say? This code came from github"
                                 }
                             },
                             {

@@ -5,10 +5,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {},
+  "dependencies": {    
+    "axios": "^0.21.0"},
   "devDependencies": {
-    "twilio-run": "^2.6.0",
-    "axios": "^0.21.0"
+    "twilio-run": "^2.6.0"   
   },
   "engines": {
     "node": "10"

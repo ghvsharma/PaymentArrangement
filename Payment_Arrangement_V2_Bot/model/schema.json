@@ -139,6 +139,9 @@
             "actions" : {
                 "actions" : [
                     {
+                        {
+                        "say" : "This is your having-trouble Task"
+                        },
                         "redirect" : {
                             "method" : "POST",
                             "uri" : "https://ngrok-8662.twil.io/CalculateAnnouncePayment-test"

@@ -141,7 +141,7 @@
                     {
                         "redirect" : {
                             "method" : "POST",
-                            "uri" : "https://paymentarrangement-8662.twil.io/CalculateAnnouncePayment"
+                            "uri" : "https://ngrok-8662.twil.io/CalculateAnnouncePayment"
                         }
                     }
                 ]

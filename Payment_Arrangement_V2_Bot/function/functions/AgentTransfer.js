@@ -13,24 +13,23 @@ exports.handler =async function(context, event, callback) {
   
   // Add your code here.  
   // Initialize Remember variables *********. 
-  console.log("AgentTransfer");  
-  Remember.AgentTransfer=true;
-  Say="You will be transferred to an agent.";
-  let requestObj= {
-      Say: Say,
-      Listen:Listen,
-      Remember:Remember,
-      Collect:Collect,
-      Tasks:Tasks,
-      Redirect:Redirect,
-      Handoff:Handoff,
-      callback:callback
-    };
-let API_responseBuilder = context.fnURL + 'responseBuilder';
-  console.log(API_responseBuilder);
- let responseObj = await axios.post(API_responseBuilder, requestObj, {headers: { 'Content-Type': 'application/json'}});
- //console.log(JSON.stringify(responseObj));
-  callback(null, responseObj.data);
+  console.log("AgentTransfer"); 
+  //****************** put your business logic here.*********//////////// 
+
+
+
+  //****************** End of your business logic.*********//////////// 
+  //***************** * Fill parameters for Response Builder ******////
+  
+  Say="You will be transferred to an agent."; 
+
+const functions = Runtime.getFunctions();
+let path = functions['responseBuilder'].path;
+//console.log("path:"+path);
+let RB = require(path);
+
+await RB.responseBuilder(Say, Listen, Remember, Collect, Tasks, Redirect, Handoff, callback);
+
   } catch (error) {
     console.log("error found") ;
   console.error(error.message);    

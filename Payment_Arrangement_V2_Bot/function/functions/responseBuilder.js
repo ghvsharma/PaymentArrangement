@@ -1,12 +1,7 @@
 
-  exports.handler =async function(context, event, callback) {
-    let Say=event.Say;
-    let Listen = event.Listen;
-    let Remember = event.Remember;
-    let Collect = event.Collect;
-    let Tasks = event.Task;
-    let Redirect = event.Redirect;
-    let Handoff = event.Handoff;
+  exports.responseBuilder=async function (Say, Listen, Remember, Collect, Tasks, Redirect, Handoff, callback) {
+    
+    //console.log("responseBuilder");
     
    let responseObject = {
    "actions": [
